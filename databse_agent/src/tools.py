@@ -16,7 +16,7 @@ class Tools:
         - `list` or `dict`: The result of the specified action. For 'find', it returns a list of documents. For 'insert', 'update', and 'delete', it returns a dictionary with the operation's details.
         """
         # Connect to MongoDB
-        client = MongoClient("mongodb+srv://shubham:shubham@cluster0.r1hcq.mongodb.net/")  # Update with your connection string
+        client = MongoClient("mongo_URL")  # Update with your connection string
         db = client['sample_mflix']  # Replace with your database name
         collection = db['test']  # Replace with your collection name
 
@@ -42,7 +42,7 @@ class Tools:
         **Returns**:
         - `dict`: A dictionary describing the schema of the collection. Each key is a field name and each value is the type of the field.
         """
-        client = MongoClient("mongodb+srv://shubham:shubham@cluster0.r1hcq.mongodb.net/")
+        client = MongoClient("mongo_URL")
         db = client['sample_mflix']  # Replace with your database name
         collection = db['movies']  # Replace with your collection name
 
